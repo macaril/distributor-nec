@@ -7,7 +7,7 @@ export function middleware(request: NextRequest) {
   if (request.nextUrl.pathname.startsWith('/admin')) {
     if (!auth) {
       // Jika tidak login, lempar ke halaman login
-      return NextResponse.redirect(new URL('/login', request.url));
+      return NextResponse.redirect(new URL('/admin-login', request.url));
     }
   }
 }
